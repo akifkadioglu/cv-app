@@ -15,6 +15,10 @@ const routes = [
     name: 'Intro',
     component: Intro
   },
+  {
+    path: '/*',
+    component: Home
+  },
 
 ]
 
