@@ -11,30 +11,23 @@
     >
       <v-icon>mdi-cog-outline</v-icon>
     </v-btn>
-    <transition name="fade" mode="out-in">
-      <v-btn
-        v-if="isSettingOpen"
-        @click="changeMode"
-        class="mode"
-        icon
-        large
-        depressed
-        fab
-      >
-        <v-icon>mdi-weather-night</v-icon>
-      </v-btn>
-    </transition>
-    <transition name="fade" mode="out-in">
+
+    <transition
+      name="fade"
+      mode="out-in"
+      v-for="(item, index) in settings"
+      :key="index"
+    >
       <v-btn
         v-if="isSettingOpen"
         @click="changeLanguage"
-        class="translate"
+        class="item"
+        :style="'bottom:' + (120 + index * 50) + 'px'"
         icon
         large
         depressed
-        fab
       >
-        <v-icon>mdi-translate</v-icon>
+        <v-icon>{{ item.icon }}</v-icon>
       </v-btn>
     </transition>
   </div>
@@ -44,6 +37,16 @@ export default {
   data() {
     return {
       isSettingOpen: false,
+      settings: [
+        {
+          icon: "mdi-weather-night",
+          func: this.changeMode,
+        },
+        {
+          icon: "mdi-translate",
+          func: this.changeLanguage,
+        },
+      ],
     };
   },
   methods: {
@@ -62,14 +65,8 @@ export default {
   bottom: 45px;
   right: 20px;
 }
-.translate {
+.item {
   position: fixed;
-  bottom: 135px;
-  right: 20px;
-}
-.mode {
-  position: fixed;
-  bottom: 225px;
-  right: 20px;
+  right: 30px;
 }
 </style>

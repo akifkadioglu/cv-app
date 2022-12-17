@@ -1,7 +1,36 @@
 <template>
   <div>
-    <div class="item" :style="'bottom:' + 90 + 'px'">asd</div>
-    <div></div>
+    <div
+      v-for="(item, index) in contact"
+      :key="index"
+      class="item"
+      :style="'bottom:' + (120 + index * 50) + 'px'"
+    >
+      <transition name="fade" mode="out-in">
+        <v-btn
+          v-if="isContactsOpen"
+          @click="goLink(item.link)"
+          icon
+          large
+          depressed
+        >
+          <v-icon>{{ item.icon }}</v-icon>
+        </v-btn>
+      </transition>
+    </div>
+    <div>
+      <v-btn
+        @click="isContactsOpen = !isContactsOpen"
+        icon
+        large
+        depressed
+        fab
+        class="fab-item"
+        color="primary"
+      >
+        <v-icon>mdi-account-settings-outline</v-icon>
+      </v-btn>
+    </div>
   </div>
 </template>
 
@@ -9,6 +38,7 @@
 export default {
   data() {
     return {
+      isContactsOpen: false,
       contact: [
         {
           title: "Github",
@@ -42,8 +72,13 @@ export default {
 </script>
 
 <style scoped>
-.item {
+.fab-item {
   position: fixed;
   left: 20px;
+  bottom: 45px;
+}
+.item {
+  position: fixed;
+  left: 30px;
 }
 </style>
