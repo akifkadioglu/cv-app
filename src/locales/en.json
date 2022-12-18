@@ -1,6 +1,12 @@
 {
+  "accounts": "Accounts",
+  "graffiti-type": "Digital Graffiti Artist",
+  "resume": "Resume",
+  "about-me": "About me",
+  "projects": "Projects",
   "intro": "More..",
   "developer-type": "Full Stack Web Developer",
+  "which-stack": "I am a full stack developer, I develop applications using Golang, Vue js (version 2) and Flutter.",
   "header": "Hi There👋",
   "contact-me": "Contact me",
   "settings": "Settings",

@@ -20,7 +20,7 @@
     >
       <v-btn
         v-if="isSettingOpen"
-        @click="changeLanguage"
+        @click="item.func"
         class="item"
         :style="'bottom:' + (120 + index * 50) + 'px'"
         icon

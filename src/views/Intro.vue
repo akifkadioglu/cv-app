@@ -1,5 +1,11 @@
 <template>
   <div>
+    <div
+      class="background-settings"
+      :style="{
+        'background-image': 'url(' + require('@/assets/graffiti.png') + ')',
+      }"
+    />
     <div class="text-wrapper">
       <div class="background"></div>
     </div>
@@ -17,7 +23,16 @@
         <span style="font-size: 21px; color: #61afef">{{
           $t("developer-type")
         }}</span>
-        <span style="font-size: 22px; color: white">!</span>
+        <span style="font-size: 15px; color: #e4bb68">")</span>
+      </div>
+      <div class="text">
+        <span style="font-size: 15px; color: #e4bb68">fmt</span>
+        <span style="font-size: 15px; color: white">.</span>
+        <span style="font-size: 15px; color: #e06c75">Println</span>
+        <span style="font-size: 15px; color: #e4bb68">("</span>
+        <span style="font-size: 21px; color: #61afef">{{
+          $t("graffiti-type")
+        }}</span>
         <span style="font-size: 15px; color: #e4bb68">")</span>
       </div>
     </div>
@@ -44,9 +59,15 @@ export default {};
 </script>
 
 <style scoped>
+.background-settings {
+  background-size: 100%;
+  background-position: center;
+  height: 80vh;
+  opacity: 0.2;
+}
 .background {
   background: #282c34;
-  height: 250px;
+  height: 350px;
   width: 600px;
 }
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;500&display=swap");

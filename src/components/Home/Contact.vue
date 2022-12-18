@@ -26,7 +26,7 @@
         depressed
         fab
         class="fab-item"
-        color="primary"
+        color="error"
       >
         <v-icon>mdi-account-settings-outline</v-icon>
       </v-btn>
