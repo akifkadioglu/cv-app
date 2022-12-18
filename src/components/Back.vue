@@ -19,12 +19,14 @@
         v-if="$i18n.locale == 'en'"
         src="@/assets/back-en.png"
         width="200px"
+        rel="preload"
       />
       <img
         class="show-settings"
         v-else
         src="@/assets/back-tr.png"
         width="200px"
+        rel="preload"
       />
     </div>
   </div>

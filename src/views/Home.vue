@@ -32,7 +32,7 @@
         {{ $t("settings") }}
       </v-btn>
     </div>
-    <div class="buttons">
+    <div class="buttons" v-if="false">
       <v-btn text class="button" depressed>
         {{ $t("about-me") }}
       </v-btn>
@@ -47,6 +47,7 @@
     </div>
     <transition name="fade" mode="out-in">
       <img
+        rel="preload"
         class="show-accounts"
         v-if="isAccountsShowing"
         src="@/assets/arrow.png"
@@ -55,6 +56,7 @@
     </transition>
     <transition name="fade" mode="out-in">
       <img
+        rel="preload"
         class="show-settings"
         v-if="isSettingsShowing"
         src="@/assets/right.png"
