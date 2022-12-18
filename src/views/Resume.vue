@@ -1,6 +1,6 @@
 <template>
   <div class="resume-page text-center">
-    <img src="@/assets/cv.png" height="900vh" />
+    <img src="@/assets/cv.png" width="100%" />
     <Back />
   </div>
 </template>

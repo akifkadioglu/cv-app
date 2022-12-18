@@ -18,6 +18,11 @@ export default {
   components: {
     Footer,
   },
+  mounted() {
+    setTimeout(function () {
+      window.scrollTo(0, 1);
+    }, 0);
+  },
   data() {
     return {};
   },
