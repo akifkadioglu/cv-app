@@ -1,6 +1,9 @@
 <template>
   <div class="resume-page text-center">
-    <img src="@/assets/cv.png" height="100%" rel="preload" />
+    <div align="center">
+      <img src="@/assets/cv.png" rel="preload" />
+    </div>
+
     <Back />
   </div>
 </template>
@@ -15,5 +18,13 @@ export default {
 <style scoped>
 .resume-page {
   height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+}
+
+img {
+  max-height: 1024px;
+  max-width: 100%;
 }
 </style>
