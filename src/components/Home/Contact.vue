@@ -41,24 +41,24 @@ export default {
       isContactsOpen: false,
       contact: [
         {
+          title: "Mail",
+          icon: "mdi-email-outline",
+          link: "mailto: akifkadioglu@yaani.com",
+        },
+        {
           title: "Github",
           icon: "mdi-github",
           link: "https://github.com/akifkadioglu",
         },
         {
+          title: "Whatsapp",
+          icon: "mdi-whatsapp",
+          link: "https://wa.me/+905558803528/?text=Merhaba!",
+        },
+        {
           title: "LinkedIn",
           icon: "mdi-linkedin",
           link: "https://www.linkedin.com/in/akif-kadioglu-88429a1b2/",
-        },
-        {
-          title: "Twitter",
-          icon: "mdi-twitter",
-          link: "https://twitter.com/akifkadioglu",
-        },
-        {
-          title: "Instagram",
-          icon: "mdi-instagram",
-          link: "https://instagram.com/akifkadioglu",
         },
       ],
     };

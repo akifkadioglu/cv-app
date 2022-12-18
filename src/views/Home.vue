@@ -33,15 +33,15 @@
       </v-btn>
     </div>
     <div class="buttons">
-      <v-btn text color="secondary" class="button" depressed>
+      <v-btn text class="button" depressed>
         {{ $t("about-me") }}
       </v-btn>
-      <v-btn text color="secondary" class="button" depressed>
+      <v-btn text class="button" depressed>
         {{ $t("projects") }}
       </v-btn>
     </div>
     <div class="buttons">
-      <v-btn text color="secondary" class="button" depressed>
+      <v-btn text class="button" :to="{ name: 'Resume' }" depressed>
         {{ $t("resume") }}
       </v-btn>
     </div>
@@ -84,9 +84,8 @@ export default {
 img {
   z-index: 0;
 }
-.button{
-    z-index: 1;
-
+.button {
+  z-index: 1;
 }
 .text {
   font-size: 23px;
